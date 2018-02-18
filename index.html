@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Haven | Studio di progettazione industriale</title>
+    <meta name="description" content="Studio di progettazione industriale specializzato nel product design e nella creazione della brand identity." />
+    <meta name="keywords" content="Design, Moda, Luxury" />
+    <link href="stile.css" rel="stylesheet" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <!-- da quì comincia la parte in alto -->
+    <div class="menu">
+      <div>
+        <a href="#Home">Home</a>
+      </div>
+      <div>
+        <a href="#About">About</a>
+      </div>
+      <div>
+        <a href="#Services">Services</a>
+      </div>
+      <div>
+        <a href="#Work">Work</a>
+      </div>
+      <div>
+        <a href="#Pricing">Pricing</a>
+      </div>
+      <div>
+        <a href="#Blog">Blog</a>
+      </div>
+      <div>
+        <a href="#Contact">Contact</a>
+      </div>
+      <div>
+        <a href="#Facebook">Facebook</a>
+      </div>
+      <div>
+        <a href="Twitter">Twitter</a>
+      </div>
+    </div>
+    <table  id="Home" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <iframe id="perscript" src="img/4grande.png" class="mioframe" name="zoom" max-width="100%" width="100%" height="100%" scrolling="no" frameborder="none" marginwidth="0" marginheight="0"></iframe>
+      </tr>
+      <tr>
+        <td width="33%"></td>
+        <td>
+          <div class="rigadue">
+            <a href="img/1grande.png" target="zoom" alt="Design">
+              <img src="img/1.svg" width="160" height="120" alt="Design"/>
+            </a>
+            <a href="img/2grande.png" target="zoom" alt="Design">
+              <img src="img/2.svg" width="160" height="120" alt="Design"/>
+            </a>
+            <a href="img/3grande.png" target="zoom" alt="Design" >
+              <img src="img/3.svg" width="160" height="120" alt="Design"/>
+            </a>
+            <a href="img/4grande.png" target="zoom" alt="Design">
+              <img src="img/4.svg" width="160" height="120" alt="Design"/>
+            </a>
+          </div>
+        </td>
+        <td width="33%"></td>
+      </tr>
+    </table>
+    <script>
+        var myImage=document.getElementById("perscript");
+        var imageArray=["img/1grande.png", "img/2grande.png", "img/3grande.png", "img/4grande.png"];
+        var imageIndex=0;
+        function cambiaImmagine () {
+            myImage.setAttribute("src", imageArray[imageIndex]);
+            
+            if (imageIndex
+      <3) {imageIndex++;}
+          else{imageIndex = 0;}
+          //* while(imageIndex<=3){a++};
+        }
+        var intervallo=setInterval(cambiaImmagine,4000);
+        myPhoto.onclick=function() {
+            clearInterval(intervallo);
+        }
+    </script>
+  </body>
+</html>
