@@ -8,6 +8,7 @@ var myImage = document.getElementById("slideshow-container");
 var images = ["img/1.png", "img/2.png", "img/3.png", "img/4.png"];
 var imageIndex = 0;
 
+```
 function imagechange() {
 myImage.setAttribute("src", images[imageIndex]);
 if (imageIndex < 3) {
@@ -20,6 +21,7 @@ var interval = setInterval(imagechange, 4000);
 myImage.onclick = function() {
 clearInterval(interval);
 }
+```
 
 Let’s break down what’s happening here.
 
