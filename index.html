@@ -3,15 +3,13 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Haven | Studio di progettazione industriale</title>
-    <meta name="description" content="Studio di progettazione industriale specializzato nel product design e nella creazione della brand identity." />
-    <meta name="keywords" content="Design, Luxury, Moda" />
+    <title>Haven | Creative Agency</title>
+    <meta name="description" content="Haven is a creative agency. We work with clients to identify, develop and create the premium qualities of their brands." />
     <link href="stile.css" rel="stylesheet" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <!-- da quì comincia la parte in alto -->
     <div class="menu">
         <div>
             <a href="#Home">Home</a>
@@ -43,48 +41,46 @@
     </div>
     <table id="Home" border="0" cellspacing="0" cellpadding="0">
         <tr>
-            <iframe id="perscript" src="img/4grande.png" class="mioframe" name="zoom" max-width="100%" width="100%" height="100%" scrolling="no" frameborder="none" marginwidth="0" marginheight="0"></iframe>
+            <img id="slideshow-container" src="img/4.png" max-width="100%" width="100%" height="100%" scrolling="no" frameborder="none" marginwidth="0" marginheight="0"></img>
         </tr>
         <tr>
             <td width="33%"></td>
             <td>
-                <div class="rigadue">
-                    <a href="img/1grande.png" target="zoom" alt="Design">
+                <div class="buttons">
+                    <button onclick="document.getElementById('slideshow-container').src='img/1.png'">
                         <img src="img/1.svg" width="160" height="120" alt="Design" />
-                    </a>
-                    <a href="img/2grande.png" target="zoom" alt="Design">
+                    </button>
+                    <button onclick="document.getElementById('slideshow-container').src='img/2.png'">
                         <img src="img/2.svg" width="160" height="120" alt="Design" />
-                    </a>
-                    <a href="img/3grande.png" target="zoom" alt="Design">
+                    </button>
+                    <button onclick="document.getElementById('slideshow-container').src='img/3.png'">
                         <img src="img/3.svg" width="160" height="120" alt="Design" />
-                    </a>
-                    <a href="img/4grande.png" target="zoom" alt="Design">
+                    </button>
+                    <button onclick="document.getElementById('slideshow-container').src='img/4.png'">
                         <img src="img/4.svg" width="160" height="120" alt="Design" />
-                    </a>
+                    </button>
                 </div>
             </td>
             <td width="33%"></td>
         </tr>
     </table>
     <script>
-        var myImage = document.getElementById("perscript");
-        var imageArray = ["img/1grande.png", "img/2grande.png", "img/3grande.png", "img/4grande.png"];
+        var myImage = document.getElementById("slideshow-container");
+        var images = ["img/1.png", "img/2.png", "img/3.png", "img/4.png"];
         var imageIndex = 0;
 
-        function cambiaImmagine() {
-            myImage.setAttribute("src", imageArray[imageIndex]);
+        function imagechange() {
+            myImage.setAttribute("src", images[imageIndex]);
 
-            if (imageIndex <
-                3) {
+            if (imageIndex < 3) {
                 imageIndex++;
             } else {
                 imageIndex = 0;
             }
-            //* while(imageIndex<=3){a++};
         }
-        var intervallo = setInterval(cambiaImmagine, 4000);
-        myPhoto.onclick = function() {
-            clearInterval(intervallo);
+        var interval = setInterval(imagechange, 4000);
+        myImage.onclick = function() {
+            clearInterval(interval);
         }
     </script>
 </body>
