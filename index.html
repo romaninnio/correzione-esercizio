@@ -55,10 +55,10 @@
     </div>
 
     <div class="buttons" style="text-align:center">
-        <span onclick="document.getElementByClassName('image')[0]" class="dot"></span>
-        <span onclick="document.getElementByClassName('image')[1]" class="dot"></span>
-        <span onclick="document.getElementByClassName('image')[2]" class="dot"></span>
-        <span onclick="document.getElementByClassName('image')[3]" class="dot"></span>
+        <span onclick="$('.image').addClass('invisible'); $('.image').eq(0).removeClass('invisible')" class="dot"></span>
+        <span onclick="$('.image').addClass('invisible'); $('.image').eq(1).removeClass('invisible')" class="dot"></span>
+        <span onclick="$('.image').addClass('invisible'); $('.image').eq(2).removeClass('invisible')" class="dot"></span>
+        <span onclick="$('.image').addClass('invisible'); $('.image').eq(3).removeClass('invisible')" class="dot"></span>
     </div>
 
     <script>
