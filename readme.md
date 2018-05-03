@@ -5,31 +5,27 @@ This is an infinite loop Javascript exercise for Picture Slideshow.
 Here’s how the JavaScript look:
 
 ```
-var myImage = document.getElementById("slideshow-container");
-var images = ["img/1.png", "img/2.png", "img/3.png", "img/4.png"];
 var imageIndex = 0;
 
-function imagechange() {
-myImage.setAttribute("src", images[imageIndex]);
-if (imageIndex < 3) {
-imageIndex++;
-} else {
-imageIndex = 0;
-}
-}
+        function imagechange() {
+            $(".image").addClass("invisible");
+            $(".image").eq(imageIndex).removeClass("invisible");
+            
 
-var interval = setInterval(imagechange, 4000);
-myImage.onclick = function() {
-clearInterval(interval);
-}
+            if (imageIndex < 3) {
+                imageIndex++;
+            } else {
+                imageIndex = 0;
+            }
+        }
+
+        setInterval(imagechange, 1800);
 ```
 
 Let’s break down what’s happening here.
 
-First we’re setting a variable "myImage" to keep track of the slides.
+To add a fade effect to the Slideshow we're initially add invisible class to every ".image" Node to subsequently remove it from the node with the current ".image" index.
 
-Next we're creating an array and populate it with all the images that we are going to be using.
+We're setting the initial index of the ".image" NodeList object to 0 and making this index increase by 1, reach the number of 3 and turn back to his initial value each time the function runs.
 
-After we're setting the initial index of the array to 0 and making this index increase by 1, reach the number of 3 and turn back to his initial value each time the function runs.
-
-We’re finally setting an interval to run this function every four seconds (expressed as 4000 ms).
+We’re finally setting an interval to run this function every 1,8 seconds (expressed as 1800 ms).
