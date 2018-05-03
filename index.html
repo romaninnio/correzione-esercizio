@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Haven | Creative Agency</title>
     <meta name="description" content="Haven is a creative agency. We work with clients to identify, develop and create the premium qualities of their brands.">
+    <script src="jquery-3.3.1.js"></script>
     <link href="stile.css" rel="stylesheet" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
@@ -46,24 +47,27 @@
         </div>
     </div>
 
-    <div id="Home" border="0" cellspacing="0" cellpadding="0">
-        <img id="slideshow-container" src="img/4.png" max-width="100%" width="100%" height="100%" scrolling="no" frameborder="none" marginwidth="0" marginheight="0"></img>
+    <div id="Home">
+        <img src="img/1.png" max-width="100%" width="100%" height="auto" class="image"></img>
+        <img src="img/2.png" max-width="100%" width="100%" height="auto" class="image invisible"></img>
+        <img src="img/3.png" max-width="100%" width="100%" height="auto" class="image invisible"></img>
+        <img src="img/4.png" max-width="100%" width="100%" height="auto" class="image invisible"></img>
     </div>
 
     <div class="buttons" style="text-align:center">
-        <span onclick="document.getElementById('slideshow-container').src='img/1.png'" class="dot"></span>
-        <span onclick="document.getElementById('slideshow-container').src='img/2.png'" class="dot"></span>
-        <span onclick="document.getElementById('slideshow-container').src='img/3.png'" class="dot"></span>
-        <span onclick="document.getElementById('slideshow-container').src='img/4.png'" class="dot"></span>
+        <span onclick="document.getElementByClassName('image')[0]" class="dot"></span>
+        <span onclick="document.getElementByClassName('image')[1]" class="dot"></span>
+        <span onclick="document.getElementByClassName('image')[2]" class="dot"></span>
+        <span onclick="document.getElementByClassName('image')[3]" class="dot"></span>
     </div>
 
     <script>
-        var myImage = document.getElementById("slideshow-container");
-        var images = ["img/1.png", "img/2.png", "img/3.png", "img/4.png"];
         var imageIndex = 0;
 
         function imagechange() {
-            myImage.setAttribute("src", images[imageIndex]);
+            $(".image").addClass("invisible");
+            $(".image").eq(imageIndex).removeClass("invisible");
+            
 
             if (imageIndex < 3) {
                 imageIndex++;
@@ -71,10 +75,8 @@
                 imageIndex = 0;
             }
         }
-        var interval = setInterval(imagechange, 4000);
-        myImage.onclick = function() {
-            clearInterval(interval);
-        }
+
+        setInterval(imagechange, 1800);
     </script>
 
 </body>

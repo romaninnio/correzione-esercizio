@@ -52,6 +52,28 @@ a {
     line-height: 75px;
 }
 
+
+#Home {position:relative;}
+
+.image {
+    top:0px;
+    position: absolute;
+    left: 0px;
+    opacity: 1;
+    -webkit-transition: opacity 200ms ease-out 1s;
+    -moz-transition: opacity 200ms ease-out 1s;
+    -o-transition: opacity 200ms ease-out 1s;
+    transition: opacity 200ms ease-out 1s;
+}
+
+.image:first-of-type{
+    position:relative;
+}
+
+.invisible {
+    opacity: 0;
+}
+
 .buttons {
     padding-left: 0%;
     padding-right: 0%;
@@ -81,29 +103,6 @@ button {
     background-color: #717171;
 }
 
-#slideshow-container:nth-of-type(1) {
-    animation-name: fader;
-    animation-delay: 4s;
-    animation-duration: 1s;
-    z-index: 20;
-}
-
-#slideshow-container:nth-of-type(2) {
-    z-index: 10;
-}
-
-#slideshow-container:nth-of-type(n + 3) {
-    display: none;
-}
-
-@keyframes fader {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
 
 
 /*Responsive Styles*/
